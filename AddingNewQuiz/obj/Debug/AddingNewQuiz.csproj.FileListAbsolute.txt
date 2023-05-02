@@ -1,0 +1,10 @@
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\bin\Debug\AddingNewQuiz.exe.config
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\bin\Debug\AddingNewQuiz.exe
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\bin\Debug\AddingNewQuiz.pdb
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\obj\Debug\AddingNewQuiz.csproj.AssemblyReference.cache
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\obj\Debug\AddingNewQuiz.csproj.SuggestedBindingRedirects.cache
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\obj\Debug\AddingNewQuiz.Properties.Resources.resources
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\obj\Debug\AddingNewQuiz.csproj.GenerateResource.cache
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\obj\Debug\AddingNewQuiz.csproj.CoreCompileInputs.cache
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\obj\Debug\AddingNewQuiz.exe
+C:\Users\jeffk\RiderProjects\AddingNewQuiz\AddingNewQuiz\obj\Debug\AddingNewQuiz.pdb
