@@ -43,7 +43,6 @@ namespace AddingNewQuiz
             Controls.Add(AddNewQuizForm_MinuteCloseCbo);
             Controls.Add(AddNewQuizForm_CloseTbt);
             Controls.Add(AddNewQuizForm_CloseLbl);
-            Controls.Add(AddNewQuizForm_TimelimitTtb);
             Controls.Add(AddNewQuizForm_TimelimiMinuteCbo);
             Controls.Add(AddNewQuizForm_TimelimitTbt);
             Controls.Add(AddNewQuizForm_TimelimitLbl);
