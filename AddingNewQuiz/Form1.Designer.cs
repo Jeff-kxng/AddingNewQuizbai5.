@@ -532,6 +532,18 @@ namespace AddingNewQuiz
             AddNewQuizForm_TimelimitPb.Maximum = 100; // set the maximum value of the progress bar
             AddNewQuizForm_TimelimitPb.Step = 1; // set the amount by which the progress bar is incremented
 
+            //
+            // Add number zero to ProgressBar with Label
+            //
+            
+            Label timeLimitLabel = new Label();
+            timeLimitLabel.Name = "timeLimitLabel";
+            timeLimitLabel.Font = new Font("Segoe UI", 12.5F, FontStyle.Regular, GraphicsUnit.Point);
+            timeLimitLabel.TabIndex = 34;
+            timeLimitLabel.Location = new Point(295, 765);
+            timeLimitLabel.Size = new Size(25, 30);
+            timeLimitLabel.Text = "0";
+            Controls.Add(timeLimitLabel);
 
             //
             // AddNewQuizForm_TimelimiMinuteCbo
@@ -539,7 +551,7 @@ namespace AddingNewQuiz
 
             AddNewQuizForm_TimelimiMinuteCbo = new ComboBox();
             AddNewQuizForm_TimelimiMinuteCbo.AutoSize = true;
-            AddNewQuizForm_TimelimiMinuteCbo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            AddNewQuizForm_TimelimiMinuteCbo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             AddNewQuizForm_TimelimiMinuteCbo.Name = "AddNewQuizForm_TimelimiMinuteCbo";
             AddNewQuizForm_TimelimiMinuteCbo.TabIndex = 30;
             AddNewQuizForm_TimelimiMinuteCbo.Location = new Point(285, 495);
@@ -585,7 +597,7 @@ namespace AddingNewQuiz
             AddNewQuizForm_TimeexpiresCloseCbo.AutoSize = true;
             AddNewQuizForm_TimeexpiresCloseCbo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             AddNewQuizForm_TimeexpiresCloseCbo.Name = "AddNewQuizForm_TimeexpiresCloseCbo";
-            AddNewQuizForm_TimeexpiresCloseCbo.TabIndex = 32;
+            AddNewQuizForm_TimeexpiresCloseCbo.TabIndex = 33;
             AddNewQuizForm_TimeexpiresCloseCbo.Location = new Point(215, 540);
             AddNewQuizForm_TimeexpiresCloseCbo.Size = new Size(263, 85);
 
@@ -676,4 +688,3 @@ namespace AddingNewQuiz
         private ComboBox AddNewQuizForm_TimeexpiresCloseCbo;
     }
 }
-
