@@ -595,15 +595,15 @@ namespace AddingNewQuiz
 
             AddNewQuizForm_TimeexpiresCloseCbo = new ComboBox();
             AddNewQuizForm_TimeexpiresCloseCbo.AutoSize = true;
-            AddNewQuizForm_TimeexpiresCloseCbo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            AddNewQuizForm_TimeexpiresCloseCbo.Font = new Font("Segoe UI", 11.5F, FontStyle.Regular, GraphicsUnit.Point);
             AddNewQuizForm_TimeexpiresCloseCbo.Name = "AddNewQuizForm_TimeexpiresCloseCbo";
             AddNewQuizForm_TimeexpiresCloseCbo.TabIndex = 33;
             AddNewQuizForm_TimeexpiresCloseCbo.Location = new Point(215, 540);
-            AddNewQuizForm_TimeexpiresCloseCbo.Size = new Size(263, 85);
+            AddNewQuizForm_TimeexpiresCloseCbo.Size = new Size(286, 200);
 
             // Add " Open attempts are submitted automatically " to AddNewQuizForm_TimeexpiresCloseCbo
 
-            AddNewQuizForm_TimeexpiresCloseCbo.Items.Add("Open attempts are submitted automatically");
+            AddNewQuizForm_TimeexpiresCloseCbo.Items.Add(" Open attempts are submitted automatically");
             AddNewQuizForm_TimeexpiresCloseCbo.SelectedIndex = 0;
 
             //
