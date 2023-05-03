@@ -1,4 +1,6 @@
+using System;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace AddingNewQuiz
@@ -9,7 +11,6 @@ namespace AddingNewQuiz
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -30,6 +31,7 @@ namespace AddingNewQuiz
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -132,9 +134,11 @@ namespace AddingNewQuiz
             AddNewQuizForm_DisplayLbl.Name = "AddNewQuizForm_DisplayLbl";
             AddNewQuizForm_DisplayLbl.TabIndex = 8;
             AddNewQuizForm_DisplayLbl.Text = "Display description on course page";
+            
             //
             // AddNewQuizForm_LineLbl
             //
+            
             AddNewQuizForm_LineLbl = new Label();
             AddNewQuizForm_LineLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             AddNewQuizForm_LineLbl.AutoSize = false;
@@ -212,6 +216,7 @@ namespace AddingNewQuiz
             //
             // AddNewQuizForm_dateopenCbo
             //
+            
             AddNewQuizForm_dateopenCbo = new ComboBox();
             AddNewQuizForm_dateopenCbo.AutoSize = true;
             AddNewQuizForm_dateopenCbo.Font =  new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
@@ -219,6 +224,13 @@ namespace AddingNewQuiz
             AddNewQuizForm_dateopenCbo.TabIndex = 15;
             AddNewQuizForm_dateopenCbo.Location = new Point(215, 410);
             AddNewQuizForm_dateopenCbo.Size = new Size(60,60);
+            
+            // Add day numbers (1-31) to the AddNewQuizForm_dateopenCbo
+            
+            for (int i = 1; i <= 31; i++)
+            {
+                AddNewQuizForm_dateopenCbo.Items.Add(i.ToString("D2"));
+            }
             
             //
             // AddNewQuizForm_MonthopenCbo
@@ -232,6 +244,13 @@ namespace AddingNewQuiz
             AddNewQuizForm_MonthopenCbo.Location = new Point(285, 410);
             AddNewQuizForm_MonthopenCbo.Size = new Size(90, 100);
             
+            // Add the months to the AddNewQuizForm_MonthopenCbo
+            
+            for (int i = 1; i <= 12; i++)
+            {
+                AddNewQuizForm_MonthopenCbo.Items.Add(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i));
+            }
+            
             //
             // AddNewQuizForm_YearopenCbo
             //
@@ -244,6 +263,13 @@ namespace AddingNewQuiz
             AddNewQuizForm_YearopenCbo.Location = new Point(385, 410);
             AddNewQuizForm_YearopenCbo.Size = new Size(70, 80);
             
+            // Add years (current year to 10 years later) to the AddNewQuizForm_YearopenCbo
+            int currentYear = DateTime.Now.Year;
+            for (int i = currentYear; i <= currentYear + 10; i++)
+            {
+                AddNewQuizForm_YearopenCbo.Items.Add(i.ToString());
+            }
+
             //
             // AddNewQuizForm_HouropenCbo
             //
@@ -256,10 +282,16 @@ namespace AddingNewQuiz
             AddNewQuizForm_HouropenCbo.Location = new Point(465, 410);
             AddNewQuizForm_HouropenCbo.Size = new Size(65, 75);
             
+            // Add hours from 0 to 23 to the AddNewQuizForm_HouropenCbo
+            for (int i = 0; i < 24; i++)
+            {
+                AddNewQuizForm_HouropenCbo.Items.Add(i.ToString("00"));
+            }
+
             //
             // AddNewQuizForm_MinuteopenCbo
             //
-
+            
             AddNewQuizForm_MinuteopenCbo = new ComboBox();
             AddNewQuizForm_MinuteopenCbo.AutoSize = true;
             AddNewQuizForm_MinuteopenCbo.Font =  new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
@@ -267,6 +299,12 @@ namespace AddingNewQuiz
             AddNewQuizForm_MinuteopenCbo.TabIndex = 19;
             AddNewQuizForm_MinuteopenCbo.Location = new Point(540, 410);
             AddNewQuizForm_MinuteopenCbo.Size = new Size(65, 75);
+            
+            // Add minutes to the AddNewQuizForm_MinuteopenCbo
+            for (int i = 0; i < 60; i++)
+            {
+                AddNewQuizForm_MinuteopenCbo.Items.Add(i.ToString("D2"));
+            }
             
             //
             // AddNewQuizForm_openTbt
@@ -304,6 +342,12 @@ namespace AddingNewQuiz
             AddNewQuizForm_dateCloseCbo.Location = new Point(215, 450);
             AddNewQuizForm_dateCloseCbo.Size = new Size(60,60);
             
+            // Add day options to AddNewQuizForm_dateCloseCbo
+            for (int i = 1; i <= 31; i++)
+            {
+                AddNewQuizForm_dateCloseCbo.Items.Add(i.ToString("00"));
+            }
+
             //
             // AddNewQuizForm_MonthCloseCbo
             //
@@ -316,6 +360,13 @@ namespace AddingNewQuiz
             AddNewQuizForm_MonthCloseCbo.Location = new Point(285, 450);
             AddNewQuizForm_MonthCloseCbo.Size = new Size(90, 100);
             
+            // Add the months to the AddNewQuizForm_MonthCloseCbo
+            
+            for (int i = 1; i <= 12; i++)
+            {
+                AddNewQuizForm_MonthCloseCbo.Items.Add(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i));
+            }
+
             //
             // AddNewQuizForm_YearCloseCbo
             //
@@ -328,6 +379,13 @@ namespace AddingNewQuiz
             AddNewQuizForm_YearCloseCbo.Location = new Point(385, 450);
             AddNewQuizForm_YearCloseCbo.Size = new Size(70, 80);
             
+            // Add years (current year to 10 years later) to the AddNewQuizForm_YearCloseCbo
+            int currentYearClose = DateTime.Now.Year;
+            for (int i = currentYearClose; i <= currentYearClose + 10; i++)
+            {
+                AddNewQuizForm_YearCloseCbo.Items.Add(i.ToString());
+            }
+            
             //
             // AddNewQuizForm_HourCloseCbo
             //
@@ -339,6 +397,12 @@ namespace AddingNewQuiz
             AddNewQuizForm_HourCloseCbo.TabIndex = 25;
             AddNewQuizForm_HourCloseCbo.Location = new Point(465, 450);
             AddNewQuizForm_HourCloseCbo.Size = new Size(65, 75);
+            
+            // Add hours from 0 to 23 to the AddNewQuizForm_HourCloseCbo
+            for (int i = 0; i < 24; i++)
+            {
+                AddNewQuizForm_HourCloseCbo.Items.Add(i.ToString("00"));
+            }
 
             //
             // AddNewQuizForm_MinuteCloseCbo
@@ -351,6 +415,13 @@ namespace AddingNewQuiz
             AddNewQuizForm_MinuteCloseCbo.TabIndex = 26;
             AddNewQuizForm_MinuteCloseCbo.Location = new Point(540, 450);
             AddNewQuizForm_MinuteCloseCbo.Size = new Size(65, 75);
+            
+            // Add minutes to the AddNewQuizForm_MinuteCloseCbo
+            
+            for (int i = 0; i < 60; i++)
+            {
+                AddNewQuizForm_MinuteCloseCbo.Items.Add(i.ToString("D2"));
+            }
             
             //
             // AddNewQuizForm_CloseTbt
@@ -399,6 +470,14 @@ namespace AddingNewQuiz
             AddNewQuizForm_TimelimiMinuteCbo.Location = new Point(285, 495);
             AddNewQuizForm_TimelimiMinuteCbo.Size = new Size(80, 80);
             
+            // To add the strings "second", "minutes", and "hour" to the AddNewQuizForm_TimelimiMinuteCbo
+            
+            AddNewQuizForm_TimelimiMinuteCbo.Items.AddRange(new object[] {
+                "second",
+                "minutes",
+                "hour"
+            });
+            
             //
             // AddNewQuizForm_TimelimitTbt
             // 
@@ -422,7 +501,7 @@ namespace AddingNewQuiz
             AddNewQuizForm_TimelimitLbl.Location = new Point(390, 495); 
             AddNewQuizForm_TimelimitLbl.Size = new Size(300, 30);
             AddNewQuizForm_TimelimitLbl.Text = "Enable";
-
+            
             //
             //  AddNewQuizForm_TimeexpiresCloseCbo
             //
@@ -433,7 +512,12 @@ namespace AddingNewQuiz
             AddNewQuizForm_TimeexpiresCloseCbo.Name = "AddNewQuizForm_TimeexpiresCloseCbo";
             AddNewQuizForm_TimeexpiresCloseCbo.TabIndex = 32;
             AddNewQuizForm_TimeexpiresCloseCbo.Location = new Point(215, 540);
-            AddNewQuizForm_TimeexpiresCloseCbo.Size = new Size(260,85);
+            AddNewQuizForm_TimeexpiresCloseCbo.Size = new Size(263,85);
+            
+            // Add " Open attempts are submitted automatically " to AddNewQuizForm_TimeexpiresCloseCbo
+            
+            AddNewQuizForm_TimeexpiresCloseCbo.Items.Add("Open attempts are submitted automatically");
+            AddNewQuizForm_TimeexpiresCloseCbo.SelectedIndex = 0;
             
             //
             // AddNewQuizForm
@@ -476,7 +560,7 @@ namespace AddingNewQuiz
             Controls.Add(AddNewQuizForm_TimeexpiresCloseCbo);
 
             Name = "Form1";
-            Size = new Size(2000, 1000);
+            Size = new Size(850, 750);
             PerformLayout();
         }
         
