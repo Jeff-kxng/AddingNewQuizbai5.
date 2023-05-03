@@ -520,15 +520,18 @@ namespace AddingNewQuiz
             AddNewQuizForm_CloseLbl.Text = "Enable";
 
             //
-            // AddNewQuizForm_TimelimitTtb
+            // AddNewQuizForm_TimelimitPb
             //
+            
+            AddNewQuizForm_TimelimitPb = new ProgressBar();
+            AddNewQuizForm_TimelimitPb.Name = "AddNewQuizForm_TimelimitPb";
+            AddNewQuizForm_TimelimitPb.TabIndex = 29;
+            AddNewQuizForm_TimelimitPb.Location = new Point(215, 490);
+            AddNewQuizForm_TimelimitPb.Size = new Size(65, 35);
+            AddNewQuizForm_TimelimitPb.Minimum = 0; // set the minimum value of the progress bar
+            AddNewQuizForm_TimelimitPb.Maximum = 100; // set the maximum value of the progress bar
+            AddNewQuizForm_TimelimitPb.Step = 1; // set the amount by which the progress bar is incremented
 
-            AddNewQuizForm_TimelimitTtb = new TextBox();
-            AddNewQuizForm_TimelimitTtb.Multiline = true;
-            AddNewQuizForm_TimelimitTtb.Name = "AddNewQuizForm_TimelimitTtb";
-            AddNewQuizForm_TimelimitTtb.TabIndex = 29;
-            AddNewQuizForm_TimelimitTtb.Location = new Point(215, 490);
-            AddNewQuizForm_TimelimitTtb.Size = new Size(65, 35);
 
             //
             // AddNewQuizForm_TimelimiMinuteCbo
@@ -625,7 +628,7 @@ namespace AddingNewQuiz
             Controls.Add(AddNewQuizForm_MinuteCloseCbo);
             Controls.Add(AddNewQuizForm_CloseTbt);
             Controls.Add(AddNewQuizForm_CloseLbl);
-            Controls.Add(AddNewQuizForm_TimelimitTtb);
+            Controls.Add(AddNewQuizForm_TimelimitPb);
             Controls.Add(AddNewQuizForm_TimelimiMinuteCbo);
             Controls.Add(AddNewQuizForm_TimelimitTbt);
             Controls.Add(AddNewQuizForm_TimelimitLbl);
@@ -666,10 +669,11 @@ namespace AddingNewQuiz
         private ComboBox AddNewQuizForm_MinuteCloseCbo;
         private TextBox AddNewQuizForm_CloseTbt;
         private Label AddNewQuizForm_CloseLbl;
-        private TextBox AddNewQuizForm_TimelimitTtb;
+        private ProgressBar AddNewQuizForm_TimelimitPb;
         private ComboBox AddNewQuizForm_TimelimiMinuteCbo;
         private TextBox AddNewQuizForm_TimelimitTbt;
         private Label AddNewQuizForm_TimelimitLbl;
         private ComboBox AddNewQuizForm_TimeexpiresCloseCbo;
     }
 }
+
